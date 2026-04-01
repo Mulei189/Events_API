@@ -12,8 +12,10 @@ const aj = arcjet({
             mode: "LIVE",
             allow: [
                 "CATEGORY: SEARCH_ENGINE",
-                "CATEGORY: PREVIEW"
-            ]
+                "CATEGORY: PREVIEW",
+                // "UNKNOWN_BOT" // This allows Thunder Client/Postman/etc.
+            ],
+            // deny: ["CATEGORY:AI"] // Only blocks AI scrapers, allows everything else
         }),
         // Sliding window rate limiting rule
         slidingWindow({

@@ -34,17 +34,19 @@ export const securityMiddleware = async (req, res, next) => {
 
         const decision = await client.protect(req);
 
-        if(decision.isDenied && decision.reason.isBot()){
-            logger.warn(`Bot detected: ${decision.reason.getBotCategory()} - ${req.ip}`);
+        // decision.reason properties are now boolean/string, not functions
+        if (decision.isDenied && decision.reason.isBot()) {
+            logger.warn(`Bot detected: ${decision.reason.botCategory} - ${req.ip}`);
             return res.status(403).json({ message: 'Access denied - bot detected' });   
         }
 
-        if(decision.isDenied && decision.reason.isShield()){
-            logger.warn(`Shield triggered: ${decision.reason.getShieldName()} - ${req.ip}`);
+        if (decision.isDenied && decision.reason.isShield()) {
+            // Shield details are now in the 'shield' property
+            logger.warn(`Shield triggered - ${req.ip}`);
             return res.status(403).json({ message: 'Access denied - security rule triggered' });
         }
 
-        if(decision.isDenied && decision.reason.isRateLimit()){
+        if (decision.isDenied && decision.reason.isRateLimit()) {
             logger.warn(`Rate limit exceeded: ${message} - ${req.ip}`);
             return res.status(429).json({ message: 'Too many requests - rate limit exceeded' });
         }
