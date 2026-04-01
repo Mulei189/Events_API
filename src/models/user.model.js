@@ -17,6 +17,7 @@ export const bookingStatusEnum = pgEnum('booking_status', ['confirmed', 'cancell
 // Users Table
 export const users = pgTable('users', {
     id: serial('id').primaryKey(),
+    name: text('name').notNull(),
     email: text('email').notNull().unique(),
     password: text('password').notNull(),
     role: userRoleEnum('role').default('attendee').notNull(),

@@ -1,6 +1,6 @@
 // Setup database connection using Neon and Drizzle ORM
 
-import '/dotenv/config';
+import 'dotenv/config';
 import { neon, neonConfig} from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 
