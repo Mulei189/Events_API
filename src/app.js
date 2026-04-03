@@ -5,7 +5,9 @@ import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from '#routes/auth.routes.js';
+import eventsRoutes from '#routes/events.routes.js';
 import securityMiddleware from '#middlewares/security.middleware.js';
+import { authorize, authenticate } from '#middlewares/authorization.middleware.js';
     
 // Initialize app
 const app = express();
@@ -40,4 +42,5 @@ app.get('/api', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/events', authenticate, eventsRoutes);
 export default app;
