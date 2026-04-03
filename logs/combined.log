@@ -232,3 +232,10 @@
 {"level":"info","message":"Event created with title: DevSecOps II and date: Sun Nov 15 2026 13:00:00 GMT+0300 (East Africa Time)","service":"Events_API","timestamp":"2026-04-03T14:02:59.672Z"}
 {"level":"info","message":"Event created with title: DevSecOps II and date: Sun Nov 15 2026 13:00:00 GMT+0300 (East Africa Time)","service":"Events_API","timestamp":"2026-04-03T14:02:59.675Z"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [03/Apr/2026:14:02:59 +0000] \"POST /api/events/create HTTP/1.1\" 201 137 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","service":"Events_API","timestamp":"2026-04-03T14:02:59.678Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Apr/2026:14:06:50 +0000] \"PUT /api/events/2 HTTP/1.1\" 400 109 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","service":"Events_API","timestamp":"2026-04-03T14:06:50.899Z"}
+{"level":"info","message":"Event with ID 2 updated successfully","service":"Events_API","timestamp":"2026-04-03T14:07:07.158Z"}
+{"level":"info","message":"Event with ID 2 updated successfully","service":"Events_API","timestamp":"2026-04-03T14:07:07.161Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Apr/2026:14:07:07 +0000] \"PUT /api/events/2 HTTP/1.1\" 200 134 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","service":"Events_API","timestamp":"2026-04-03T14:07:07.166Z"}
+{"level":"info","message":"Event with ID 2 deleted successfully","service":"Events_API","timestamp":"2026-04-03T14:07:29.336Z"}
+{"level":"info","message":"Event with ID 2 deleted successfully","service":"Events_API","timestamp":"2026-04-03T14:07:29.434Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Apr/2026:14:07:29 +0000] \"DELETE /api/events/2 HTTP/1.1\" 200 42 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","service":"Events_API","timestamp":"2026-04-03T14:07:29.577Z"}
