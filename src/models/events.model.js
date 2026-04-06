@@ -6,7 +6,7 @@ import {
     integer, 
     pgEnum, 
     unique, 
-    check 
+    check
 } from 'drizzle-orm/pg-core';
 import { users } from "#models/user.model.js";
 
@@ -17,7 +17,4 @@ export const events = pgTable('events', {
     title: text('title').notNull(),
     eventDate: timestamp('event_date').notNull(),
     ticketsLeft: integer('tickets_left').notNull(),
-}, (table) => ({
-    // SQL CHECK constraint for tickets_left >= 0
-    ticketsCheck: check('tickets_left_check', sql`${table.ticketsLeft} >= 0`),
-}));
+});

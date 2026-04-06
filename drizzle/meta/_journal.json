@@ -8,6 +8,20 @@
       "when": 1774984670470,
       "tag": "0000_perpetual_steel_serpent",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1775411257351,
+      "tag": "0001_colossal_karnak",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1775414617056,
+      "tag": "0002_next_sasquatch",
+      "breakpoints": true
     }
   ]
 }
